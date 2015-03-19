@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<h1>Parse a Match Scoreboard:</h1>
+<div id="content" class="content">
+    <div id="form" class="border_inline_block margin">
+        <form action="" method="post" name="search">
+            {{ form.hidden_tag() }}
+            <p>
+
+            <h2>Match Data: </h2>
+            <label>Match ID Number: </label>{{ form.matchID(size=25) }} <br><br>
+            <label>Game Name: </label>{{ form.game_name(size=25) }} <br><br>
+            <label>Team 1 Name: </label>{{ form.team1(size=25) }} <br><br>
+            <label>Team 2 Name: </label>{{ form.team2(size=25) }} <br><br>
+            <label>Tournament Name: </label> {{ form.tournament_name(size=25) }} <br><br>
+            <label>Daylight Savings Time: </label> {{ form.daylight_savings_time}} <br><br>
+            <br><br>
+            <h2>Series Data: </h2>
+            <label>Team 1 Score: </label>  {{ form.blue_score(size=5) }}<br><br>
+            <label>Team 2 Score: </label>  {{ form.red_score(size=5) }}<br><br>
+            <h2>Game Data: </h2>
+            <label>Team 1 Towers: </label>{{ form.blue_towers(size=5) }} <br><br>
+            <label>Team 1 Phoenixes: </label>{{ form.blue_phoenixes(size=5) }} <br><br>
+            <label>Team 2 Towers: </label>{{ form.red_towers(size=5) }} <br><br>
+            <label>Team 2 Phoenixes: </label>{{ form.red_phoenixes(size=5) }} <br><br>
+
+
+
+            <p><input type="submit" value="Piodify!"></p>
+        </form>
+    </div>
+</div>
+{% endblock %}
